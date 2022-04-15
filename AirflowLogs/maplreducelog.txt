@@ -1,0 +1,108 @@
+*** Reading local file: /home/vedant/airflow/logs/210940125053_MiniProjectDag/MapReduce/2022-02-02T05:58:22.174914+00:00/1.log
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.MapReduce manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.MapReduce manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:28:26 UTC] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): MapReduce> on 2022-02-02 05:58:22.174914+00:00
+[2022-02-02, 11:28:26 UTC] {standard_task_runner.py:52} INFO - Started process 23780 to run task
+[2022-02-02, 11:28:26 UTC] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', '210940125053_MiniProjectDag', 'MapReduce', 'manual__2022-02-02T05:58:22.174914+00:00', '--job-id', '158', '--raw', '--subdir', 'DAGS_FOLDER/airflowDag.py', '--cfg-path', '/tmp/tmpzcw5qsm4', '--error-file', '/tmp/tmp9tsxeslm']
+[2022-02-02, 11:28:26 UTC] {standard_task_runner.py:77} INFO - Job 158: Subtask MapReduce
+[2022-02-02, 11:28:26 UTC] {logging_mixin.py:109} INFO - Running <TaskInstance: 210940125053_MiniProjectDag.MapReduce manual__2022-02-02T05:58:22.174914+00:00 [running]> on host vedant-HP-Pavilion-Laptop-15-cc1xx
+[2022-02-02, 11:28:27 UTC] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=210940125053_MiniProjectDag
+AIRFLOW_CTX_TASK_ID=MapReduce
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T05:58:22.174914+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-02T05:58:22.174914+00:00
+[2022-02-02, 11:28:27 UTC] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-02-02, 11:28:27 UTC] {subprocess.py:74} INFO - Running command: ['bash', '-c', '#!/bin/bash\n\ncd $Hadoop_HOME\n\nhadoop jar /home/vedant/eclipse-workspace/Mapreduce/target/Mapreduce-0.0.1-SNAPSHOT.jar Mini_Project.Mapreduce_job /miniproject/stage/part-00000-76967e95-c875-4b24-abfe-929717ca2516-c000.csv /miniproject/dq_good\n']
+[2022-02-02, 11:28:27 UTC] {subprocess.py:85} INFO - Output:
+[2022-02-02, 11:28:29 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:29 UTC INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+[2022-02-02, 11:28:29 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:29 UTC WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[2022-02-02, 11:28:29 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:29 UTC INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/vedant/.staging/job_1643778246012_0004
+[2022-02-02, 11:28:29 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:29 UTC INFO input.FileInputFormat: Total input files to process : 1
+[2022-02-02, 11:28:30 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:30 UTC INFO mapreduce.JobSubmitter: number of splits:1
+[2022-02-02, 11:28:30 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:30 UTC INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1643778246012_0004
+[2022-02-02, 11:28:30 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:30 UTC INFO mapreduce.JobSubmitter: Executing with tokens: []
+[2022-02-02, 11:28:30 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:30 UTC INFO conf.Configuration: resource-types.xml not found
+[2022-02-02, 11:28:30 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:30 UTC INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2022-02-02, 11:28:31 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:31 UTC INFO impl.YarnClientImpl: Submitted application application_1643778246012_0004
+[2022-02-02, 11:28:31 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:31 UTC INFO mapreduce.Job: The url to track the job: http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0004/
+[2022-02-02, 11:28:31 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:31 UTC INFO mapreduce.Job: Running job: job_1643778246012_0004
+[2022-02-02, 11:28:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:40 UTC INFO mapreduce.Job: Job job_1643778246012_0004 running in uber mode : false
+[2022-02-02, 11:28:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:40 UTC INFO mapreduce.Job:  map 0% reduce 0%
+[2022-02-02, 11:28:45 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:45 UTC INFO mapreduce.Job:  map 100% reduce 0%
+[2022-02-02, 11:28:52 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:52 UTC INFO mapreduce.Job:  map 100% reduce 100%
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:53 UTC INFO mapreduce.Job: Job job_1643778246012_0004 completed successfully
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:28:53 UTC INFO mapreduce.Job: Counters: 54
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	File System Counters
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		FILE: Number of bytes read=29790544
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		FILE: Number of bytes written=60126795
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		FILE: Number of read operations=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		FILE: Number of large read operations=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		FILE: Number of write operations=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of bytes read=27880071
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of bytes written=27879910
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of read operations=9
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of large read operations=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of write operations=4
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		HDFS: Number of bytes read erasure-coded=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	Job Counters
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Launched map tasks=1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Launched reduce tasks=1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Data-local map tasks=1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total time spent by all maps in occupied slots (ms)=3472
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total time spent by all reduces in occupied slots (ms)=4386
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total time spent by all map tasks (ms)=3472
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total time spent by all reduce tasks (ms)=4386
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total vcore-milliseconds taken by all map tasks=3472
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total vcore-milliseconds taken by all reduce tasks=4386
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total megabyte-milliseconds taken by all map tasks=3555328
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total megabyte-milliseconds taken by all reduce tasks=4491264
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	Map-Reduce Framework
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Map input records=318438
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Map output records=318438
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Map output bytes=29153662
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Map output materialized bytes=29790544
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Input split bytes=161
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Combine input records=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Combine output records=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Reduce input groups=1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Reduce shuffle bytes=29790544
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Reduce input records=318438
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Reduce output records=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Spilled Records=636876
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Shuffled Maps =1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Failed Shuffles=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Merged Map outputs=1
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		GC time elapsed (ms)=118
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		CPU time spent (ms)=8040
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Physical memory (bytes) snapshot=627056640
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Virtual memory (bytes) snapshot=5540900864
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Total committed heap usage (bytes)=371195904
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Peak Map Physical memory (bytes)=364589056
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Peak Map Virtual memory (bytes)=2768347136
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Peak Reduce Physical memory (bytes)=262467584
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Peak Reduce Virtual memory (bytes)=2772553728
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	Shuffle Errors
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		BAD_ID=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		CONNECTION=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		IO_ERROR=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		WRONG_LENGTH=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		WRONG_MAP=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		WRONG_REDUCE=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	File Input Format Counters
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Bytes Read=27879910
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 	File Output Format Counters
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - 		Bytes Written=0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - no of garbage values : 0
+[2022-02-02, 11:28:53 UTC] {subprocess.py:89} INFO - job.isSuccessful true
+[2022-02-02, 11:28:54 UTC] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-02-02, 11:28:54 UTC] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=210940125053_MiniProjectDag, task_id=MapReduce, execution_date=20220202T055822, start_date=20220202T055826, end_date=20220202T055854
+[2022-02-02, 11:28:54 UTC] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-02, 11:28:54 UTC] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+

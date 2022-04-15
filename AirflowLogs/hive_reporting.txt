@@ -1,0 +1,353 @@
+*** Reading local file: /home/vedant/airflow/logs/210940125053_MiniProjectDag/Reporting/2022-02-02T05:58:22.174914+00:00/1.log
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.Reporting manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.Reporting manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): Reporting> on 2022-02-02 05:58:22.174914+00:00
+[2022-02-02, 11:30:00 UTC] {standard_task_runner.py:52} INFO - Started process 24728 to run task
+[2022-02-02, 11:30:00 UTC] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', '210940125053_MiniProjectDag', 'Reporting', 'manual__2022-02-02T05:58:22.174914+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/airflowDag.py', '--cfg-path', '/tmp/tmpf8uf_waz', '--error-file', '/tmp/tmpcs6j1y2m']
+[2022-02-02, 11:30:00 UTC] {standard_task_runner.py:77} INFO - Job 162: Subtask Reporting
+[2022-02-02, 11:30:00 UTC] {logging_mixin.py:109} INFO - Running <TaskInstance: 210940125053_MiniProjectDag.Reporting manual__2022-02-02T05:58:22.174914+00:00 [running]> on host vedant-HP-Pavilion-Laptop-15-cc1xx
+[2022-02-02, 11:30:00 UTC] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=210940125053_MiniProjectDag
+AIRFLOW_CTX_TASK_ID=Reporting
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T05:58:22.174914+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-02T05:58:22.174914+00:00
+[2022-02-02, 11:30:00 UTC] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-02-02, 11:30:00 UTC] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'spark-submit --master yarn reporting.py']
+[2022-02-02, 11:30:00 UTC] {subprocess.py:85} INFO - Output:
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:02 UTC WARN util.Utils: Your hostname, vedant-HP-Pavilion-Laptop-15-cc1xx resolves to a loopback address: 127.0.1.1; using 192.168.1.6 instead (on interface wlo1)
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:02 UTC WARN util.Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - WARNING: An illegal reflective access operation has occurred
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/jars/spark-unsafe_2.12-3.2.0.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2022-02-02, 11:30:02 UTC] {subprocess.py:89} INFO - WARNING: All illegal access operations will be denied in a future release
+[2022-02-02, 11:30:03 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:03 UTC INFO spark.SparkContext: Running Spark version 3.2.0
+[2022-02-02, 11:30:03 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:03 UTC WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceUtils: ==============================================================
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceUtils: ==============================================================
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SparkContext: Submitted application: Python Spark SQL Hive
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SecurityManager: Changing view acls to: vedant
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SecurityManager: Changing modify acls to: vedant
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SecurityManager: Changing view acls groups to:
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-02-02, 11:30:04 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:04 UTC INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vedant); groups with view permissions: Set(); users  with modify permissions: Set(vedant); groups with modify permissions: Set()
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO util.Utils: Successfully started service 'sparkDriver' on port 43929.
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO spark.SparkEnv: Registering MapOutputTracker
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO spark.SparkEnv: Registering BlockManagerMaster
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-9e273974-f39b-49b5-9bf1-499633f53265
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO memory.MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO spark.SparkEnv: Registering OutputCommitCoordinator
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO util.log: Logging initialized @5174ms to org.sparkproject.jetty.util.log.Slf4jLog
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO server.Server: jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.13+8-Ubuntu-0ubuntu1.20.04
+[2022-02-02, 11:30:05 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:05 UTC INFO server.Server: Started @5342ms
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO server.AbstractConnector: Started ServerConnector@3266ef85{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5cadd3a3{/jobs,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3c0effa8{/jobs/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@47fd8e8d{/jobs/job,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1a85c5dd{/jobs/job/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d5b2397{/stages,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d3ca6d7{/stages/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5f05bdea{/stages/stage,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@654d4ab3{/stages/stage/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5710bc28{/stages/pool,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@364ad58a{/stages/pool/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@299117e2{/storage,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@185ded1c{/storage/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@522154c2{/storage/rdd,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@114ea84{/storage/rdd/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@59ff7ea5{/environment,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3f6d7c9e{/environment/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1989ed66{/executors,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@bb639a4{/executors/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6b22a884{/executors/threadDump,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5734f4d7{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2037618d{/static,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5e6cd71e{/,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@24d0ab1d{/api,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7aba9c63{/jobs/job/kill,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@723229d{/stages/stage/kill,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.6:4040
+[2022-02-02, 11:30:06 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:06 UTC INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO conf.Configuration: resource-types.xml not found
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Setting up container launch context for our AM
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Setting up the launch environment for our AM container
+[2022-02-02, 11:30:07 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:07 UTC INFO yarn.Client: Preparing resources for our AM container
+[2022-02-02, 11:30:08 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:08 UTC WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+[2022-02-02, 11:30:14 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:14 UTC INFO yarn.Client: Uploading resource file:/tmp/spark-995fa874-5df8-41e2-99c1-e9895a0c5bce/__spark_libs__5695914040699401565.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0005/__spark_libs__5695914040699401565.zip
+[2022-02-02, 11:30:18 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:18 UTC INFO yarn.Client: Uploading resource file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/pyspark.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0005/pyspark.zip
+[2022-02-02, 11:30:18 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:18 UTC INFO yarn.Client: Uploading resource file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/py4j-0.10.9.2-src.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0005/py4j-0.10.9.2-src.zip
+[2022-02-02, 11:30:18 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:18 UTC INFO yarn.Client: Uploading resource file:/tmp/spark-995fa874-5df8-41e2-99c1-e9895a0c5bce/__spark_conf__10731615946690842270.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0005/__spark_conf__.zip
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO spark.SecurityManager: Changing view acls to: vedant
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO spark.SecurityManager: Changing modify acls to: vedant
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO spark.SecurityManager: Changing view acls groups to:
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vedant); groups with view permissions: Set(); users  with modify permissions: Set(vedant); groups with modify permissions: Set()
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO yarn.Client: Submitting application application_1643778246012_0005 to ResourceManager
+[2022-02-02, 11:30:19 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:19 UTC INFO impl.YarnClientImpl: Submitted application application_1643778246012_0005
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:20 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:20 UTC INFO yarn.Client:
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 client token: N/A
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 ApplicationMaster host: N/A
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 ApplicationMaster RPC port: -1
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 queue: default
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 start time: 1643781619127
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 final status: UNDEFINED
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 tracking URL: http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0005/
+[2022-02-02, 11:30:20 UTC] {subprocess.py:89} INFO - 	 user: vedant
+[2022-02-02, 11:30:21 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:21 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:22 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:22 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:23 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:23 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:24 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:24 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:25 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:25 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:26 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:26 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: ACCEPTED)
+[2022-02-02, 11:30:27 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:27 UTC INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> vedant-HP-Pavilion-Laptop-15-cc1xx, PROXY_URI_BASES -> http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0005), /proxy/application_1643778246012_0005
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO yarn.Client: Application report for application_1643778246012_0005 (state: RUNNING)
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO yarn.Client:
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 client token: N/A
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 diagnostics: N/A
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 ApplicationMaster host: 192.168.1.6
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 ApplicationMaster RPC port: -1
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 queue: default
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 start time: 1643781619127
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 final status: UNDEFINED
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 tracking URL: http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0005/
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 	 user: vedant
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO cluster.YarnClientSchedulerBackend: Application application_1643778246012_0005 has started running.
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38417.
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO netty.NettyBlockTransferService: Server created on 192.168.1.6:38417
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.6, 38417, None)
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.1.6:38417 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.1.6, 38417, None)
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.6, 38417, None)
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.6, 38417, None)
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO ui.ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1d8cd00a{/metrics/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:28 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:28 UTC INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+[2022-02-02, 11:30:33 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:33 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.1.6:58660) with ID 1,  ResourceProfileId 0
+[2022-02-02, 11:30:33 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:33 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager vedant-HP-Pavilion-Laptop-15-cc1xx:37125 with 434.4 MiB RAM, BlockManagerId(1, vedant-HP-Pavilion-Laptop-15-cc1xx, 37125, None)
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.1.6:58666) with ID 2,  ResourceProfileId 0
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager vedant-HP-Pavilion-Laptop-15-cc1xx:34327 with 434.4 MiB RAM, BlockManagerId(2, vedant-HP-Pavilion-Laptop-15-cc1xx, 34327, None)
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO internal.SharedState: Warehouse path is 'hdfs://localhost:9000/user/hive/warehouse'.
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO ui.ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d3bf026{/SQL,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO ui.ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7c85f8de{/SQL/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO ui.ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2c3e602a{/SQL/execution,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO ui.ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@24376be9{/SQL/execution/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO ui.ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:30:36 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:36 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3821bbf8{/static/sql,null,AVAILABLE,@Spark}
+[2022-02-02, 11:30:37 UTC] {subprocess.py:89} INFO - ===============
+[2022-02-02, 11:30:37 UTC] {subprocess.py:89} INFO - AppName: Python Spark SQL Hive
+[2022-02-02, 11:30:37 UTC] {subprocess.py:89} INFO - Master: yarn
+[2022-02-02, 11:30:37 UTC] {subprocess.py:89} INFO - ===============
+[2022-02-02, 11:30:39 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:39 UTC INFO conf.HiveConf: Found configuration file null
+[2022-02-02, 11:30:39 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:39 UTC INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 2.3.9 using Spark classes.
+[2022-02-02, 11:30:39 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:39 UTC INFO client.HiveClientImpl: Warehouse location for Hive client (version 2.3.9) is hdfs://localhost:9000/user/hive/warehouse
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC WARN conf.HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC WARN conf.HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC INFO metastore.HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC INFO metastore.ObjectStore: ObjectStore, initialize called
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC INFO DataNucleus.Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+[2022-02-02, 11:30:40 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:40 UTC INFO DataNucleus.Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+[2022-02-02, 11:30:41 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:41 UTC INFO metastore.ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.ObjectStore: Initialized ObjectStore
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC WARN metastore.ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC WARN metastore.ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore vedant@127.0.1.1
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: Added admin role in metastore
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: Added public role in metastore
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: No user is added in admin role, since config is empty
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: get_database: default
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: default
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: get_database: global_temp
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: global_temp
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC WARN metastore.ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: create_database: Database(name:report, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/report.db, parameters:{}, ownerName:vedant)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=create_database: Database(name:report, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/report.db, parameters:{}, ownerName:vedant)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC ERROR metastore.RetryingHMSHandler: AlreadyExistsException(message:Database report already exists)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_database(HiveMetaStore.java:925)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy29.create_database(Unknown Source)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createDatabase(HiveMetaStoreClient.java:725)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:173)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy30.createDatabase(Unknown Source)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createDatabase(Hive.java:434)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$createDatabase$1(HiveClientImpl.scala:345)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$withHiveState$1(HiveClientImpl.scala:303)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:234)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:233)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:283)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.createDatabase(HiveClientImpl.scala:343)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.$anonfun$createDatabase$1(HiveExternalCatalog.scala:193)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:102)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.createDatabase(HiveExternalCatalog.scala:193)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.createDatabase(ExternalCatalogWithListener.scala:47)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createDatabase(SessionCatalog.scala:251)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.CreateDatabaseCommand.run(ddl.scala:83)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:110)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:110)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:106)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:481)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:481)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:457)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:106)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:93)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:91)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:219)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:96)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:618)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:613)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:42 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:42 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.DataSourceStrategy: Pruning directories with:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Stay: string>
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=deptwise_stay
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=report tbl=deptwise_stay
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.DataSourceStrategy: Pruning directories with:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Stay: string>
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=severitywise_stay
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=report tbl=severitywise_stay
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:43 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:43 UTC WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.DataSourceStrategy: Pruning directories with:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Available_Extra_Rooms_in_Hospital: int>
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=deptwise_room
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=report tbl=deptwise_room
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=department_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.DataSourceStrategy: Pruning directories with:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Visitors_with_Patient: int>
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=deptwise_visitor
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=report tbl=deptwise_visitor
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_database: stage
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_database: stage
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=stage tbl=severity_partitioned
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.DataSourceStrategy: Pruning directories with:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Age_Range: string>
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=severitywise_age
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO HiveMetaStore.audit: ugi=vedant	ip=unknown-ip-addr	cmd=get_table : db=report tbl=severitywise_age
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO spark.SparkContext: Invoking stop() from shutdown hook
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO server.AbstractConnector: Stopped Spark@3266ef85{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO ui.SparkUI: Stopped Spark web UI at http://192.168.1.6:4040
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO cluster.YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO memory.MemoryStore: MemoryStore cleared
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO storage.BlockManager: BlockManager stopped
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO spark.SparkContext: Successfully stopped SparkContext
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO util.ShutdownHookManager: Shutdown hook called
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-995fa874-5df8-41e2-99c1-e9895a0c5bce/pyspark-837d4339-a335-463c-ad58-53d48dc12017
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-995fa874-5df8-41e2-99c1-e9895a0c5bce
+[2022-02-02, 11:30:44 UTC] {subprocess.py:89} INFO - 2022-02-02, 11:30:44 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-42fd6d4b-fb11-42f1-adb4-51f416e98ed9
+[2022-02-02, 11:30:44 UTC] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-02-02, 11:30:44 UTC] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=210940125053_MiniProjectDag, task_id=Reporting, execution_date=20220202T055822, start_date=20220202T060000, end_date=20220202T060044
+[2022-02-02, 11:30:44 UTC] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-02, 11:30:44 UTC] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+

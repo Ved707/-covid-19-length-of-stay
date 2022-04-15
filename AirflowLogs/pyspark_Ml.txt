@@ -1,0 +1,945 @@
+*** Reading local file: /home/vedant/airflow/logs/210940125053_MiniProjectDag/Spark_ML/2022-02-02T05:58:22.174914+00:00/9.log
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.Spark_ML manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: 210940125053_MiniProjectDag.Spark_ML manual__2022-02-02T05:58:22.174914+00:00 [queued]>
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1239} INFO - Starting attempt 9 of 9
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-02-02, 11:47:38 UTC] {taskinstance.py:1259} INFO - Executing <Task(SparkSubmitOperator): Spark_ML> on 2022-02-02 05:58:22.174914+00:00
+[2022-02-02, 11:47:38 UTC] {standard_task_runner.py:52} INFO - Started process 29788 to run task
+[2022-02-02, 11:47:38 UTC] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', '210940125053_MiniProjectDag', 'Spark_ML', 'manual__2022-02-02T05:58:22.174914+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/airflowDag.py', '--cfg-path', '/tmp/tmpu0960poe', '--error-file', '/tmp/tmpj_4v193f']
+[2022-02-02, 11:47:38 UTC] {standard_task_runner.py:77} INFO - Job 170: Subtask Spark_ML
+[2022-02-02, 11:47:39 UTC] {logging_mixin.py:109} INFO - Running <TaskInstance: 210940125053_MiniProjectDag.Spark_ML manual__2022-02-02T05:58:22.174914+00:00 [running]> on host vedant-HP-Pavilion-Laptop-15-cc1xx
+[2022-02-02, 11:47:39 UTC] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=210940125053_MiniProjectDag
+AIRFLOW_CTX_TASK_ID=Spark_ML
+AIRFLOW_CTX_EXECUTION_DATE=2022-02-02T05:58:22.174914+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-02-02T05:58:22.174914+00:00
+[2022-02-02, 11:47:39 UTC] {base.py:70} INFO - Using connection to: id: spark_default. Host: yarn, Port: None, Schema: None, Login: None, Password: None, extra: {'queue': 'root.default'}
+[2022-02-02, 11:47:39 UTC] {spark_submit.py:360} INFO - Spark-Submit cmd: spark-submit --master yarn --conf spark.yarn.appMasterEnv.PYSPARK_DRIVER_PYTHON=python --conf spark.yarn.appMasterEnv.HADOOP_CONF_DIR=/home/vedant/DBDA_HOME/hadoop-3.3.1/etc/hadoop --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=/usr/bin/python3 --conf spark.yarn.appMasterEnv.AIRFLOW_CONN_SPARK_DEFAULT=local --name airflow-spark --queue root.default /home/vedant/DBDA_HOME/DBDA_Code/spark/pythonProject/Ml/ml.py 1
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:40 UTC WARN util.Utils: Your hostname, vedant-HP-Pavilion-Laptop-15-cc1xx resolves to a loopback address: 127.0.1.1; using 192.168.1.6 instead (on interface wlo1)
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:40 UTC WARN util.Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - WARNING: An illegal reflective access operation has occurred
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/jars/spark-unsafe_2.12-3.2.0.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2022-02-02, 11:47:40 UTC] {spark_submit.py:514} INFO - WARNING: All illegal access operations will be denied in a future release
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO spark.SparkContext: Running Spark version 3.2.0
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceUtils: ==============================================================
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceUtils: ==============================================================
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO spark.SparkContext: Submitted application: 210940125053_Mini_project_ml
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+[2022-02-02, 11:47:41 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:41 UTC INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SecurityManager: Changing view acls to: vedant
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SecurityManager: Changing modify acls to: vedant
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SecurityManager: Changing view acls groups to:
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vedant); groups with view permissions: Set(); users  with modify permissions: Set(vedant); groups with modify permissions: Set()
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO util.Utils: Successfully started service 'sparkDriver' on port 33049.
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SparkEnv: Registering MapOutputTracker
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SparkEnv: Registering BlockManagerMaster
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-84ac01c3-15a1-46c5-8301-3263800a0947
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO memory.MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO spark.SparkEnv: Registering OutputCommitCoordinator
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO util.log: Logging initialized @3191ms to org.sparkproject.jetty.util.log.Slf4jLog
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO server.Server: jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.13+8-Ubuntu-0ubuntu1.20.04
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO server.Server: Started @3278ms
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO server.AbstractConnector: Started ServerConnector@200b0de4{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@641cddbe{/jobs,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@24739d94{/jobs/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@55c0f683{/jobs/job,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7c8af49f{/jobs/job/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@11cb3fdf{/stages,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2dd495de{/stages/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7fcb9526{/stages/stage,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4bc82fa5{/stages/stage/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@66e19664{/stages/pool,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@15eec91c{/stages/pool/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@12f46124{/storage,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6536b71d{/storage/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@487de1e5{/storage/rdd,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7889f2c{/storage/rdd/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@530a7c3e{/environment,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@75aff83f{/environment/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7f5d1c56{/executors,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@28f8fde6{/executors/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@738a85e1{/executors/threadDump,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5a1420cb{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d1092ca{/static,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5edab632{/,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@8d0d39c{/api,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@22129f0c{/jobs/job/kill,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@71150d19{/stages/stage/kill,null,AVAILABLE,@Spark}
+[2022-02-02, 11:47:42 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:42 UTC INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.6:4040
+[2022-02-02, 11:47:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:43 UTC INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+[2022-02-02, 11:47:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:43 UTC INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO conf.Configuration: resource-types.xml not found
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO yarn.Client: Setting up container launch context for our AM
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO yarn.Client: Setting up the launch environment for our AM container
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC INFO yarn.Client: Preparing resources for our AM container
+[2022-02-02, 11:47:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:44 UTC WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+[2022-02-02, 11:47:50 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:50 UTC INFO yarn.Client: Uploading resource file:/tmp/spark-c0c59bdd-9f68-4433-a9a2-e912d600e92c/__spark_libs__6260313254350459999.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0008/__spark_libs__6260313254350459999.zip
+[2022-02-02, 11:47:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:52 UTC INFO yarn.Client: Uploading resource file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/pyspark.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0008/pyspark.zip
+[2022-02-02, 11:47:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:52 UTC INFO yarn.Client: Uploading resource file:/home/vedant/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/py4j-0.10.9.2-src.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0008/py4j-0.10.9.2-src.zip
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO yarn.Client: Uploading resource file:/tmp/spark-c0c59bdd-9f68-4433-a9a2-e912d600e92c/__spark_conf__352797629351964617.zip -> hdfs://localhost:9000/user/vedant/.sparkStaging/application_1643778246012_0008/__spark_conf__.zip
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO spark.SecurityManager: Changing view acls to: vedant
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO spark.SecurityManager: Changing modify acls to: vedant
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO spark.SecurityManager: Changing view acls groups to:
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(vedant); groups with view permissions: Set(); users  with modify permissions: Set(vedant); groups with modify permissions: Set()
+[2022-02-02, 11:47:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:53 UTC INFO yarn.Client: Submitting application application_1643778246012_0008 to ResourceManager
+[2022-02-02, 11:47:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:54 UTC INFO impl.YarnClientImpl: Submitted application application_1643778246012_0008
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:55 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:55 UTC INFO yarn.Client:
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - client token: N/A
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - diagnostics: AM container is launched, waiting for AM container to Register with RM
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - ApplicationMaster host: N/A
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - ApplicationMaster RPC port: -1
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - queue: root.default
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - start time: 1643782673777
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - final status: UNDEFINED
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - tracking URL: http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0008/
+[2022-02-02, 11:47:55 UTC] {spark_submit.py:514} INFO - user: vedant
+[2022-02-02, 11:47:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:56 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:47:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:57 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:47:58 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:47:58 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:48:00 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:00 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:48:01 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:01 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:48:02 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:02 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: ACCEPTED)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> vedant-HP-Pavilion-Laptop-15-cc1xx, PROXY_URI_BASES -> http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0008), /proxy/application_1643778246012_0008
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO yarn.Client: Application report for application_1643778246012_0008 (state: RUNNING)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO yarn.Client:
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - client token: N/A
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - diagnostics: N/A
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - ApplicationMaster host: 192.168.1.6
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - ApplicationMaster RPC port: -1
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - queue: root.default
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - start time: 1643782673777
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - final status: UNDEFINED
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - tracking URL: http://vedant-HP-Pavilion-Laptop-15-cc1xx:8088/proxy/application_1643778246012_0008/
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - user: vedant
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO cluster.YarnClientSchedulerBackend: Application application_1643778246012_0008 has started running.
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33153.
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO netty.NettyBlockTransferService: Server created on 192.168.1.6:33153
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.6, 33153, None)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.1.6:33153 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.1.6, 33153, None)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.6, 33153, None)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.6, 33153, None)
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO ui.ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:03 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:03 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7d6f2de8{/metrics/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:04 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:04 UTC INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+[2022-02-02, 11:48:08 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:08 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.1.6:50480) with ID 1,  ResourceProfileId 0
+[2022-02-02, 11:48:09 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:09 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager vedant-HP-Pavilion-Laptop-15-cc1xx:46091 with 434.4 MiB RAM, BlockManagerId(1, vedant-HP-Pavilion-Laptop-15-cc1xx, 46091, None)
+[2022-02-02, 11:48:10 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:10 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.1.6:50484) with ID 2,  ResourceProfileId 0
+[2022-02-02, 11:48:10 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:10 UTC INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+[2022-02-02, 11:48:10 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:10 UTC INFO storage.BlockManagerMasterEndpoint: Registering block manager vedant-HP-Pavilion-Laptop-15-cc1xx:40881 with 434.4 MiB RAM, BlockManagerId(2, vedant-HP-Pavilion-Laptop-15-cc1xx, 40881, None)
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO internal.SharedState: Warehouse path is 'file:/home/vedant/spark-warehouse'.
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO ui.ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@22ddb05d{/SQL,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO ui.ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3e52f9bb{/SQL/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO ui.ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64f027c1{/SQL/execution,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO ui.ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3fc29ef9{/SQL/execution/json,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO ui.ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@58ab1089{/static/sql,null,AVAILABLE,@Spark}
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - ===============
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - AppName: 210940125053_Mini_project_ml
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - Master: yarn
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - ===============
+[2022-02-02, 11:48:11 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:11 UTC INFO datasources.InMemoryFileIndex: It took 62 ms to list leaf files for 1 paths.
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO spark.SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 101.9 KiB, free 434.3 MiB)
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 36.9 KiB, free 434.3 MiB)
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.6:33153 (size: 36.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO cluster.YarnScheduler: Adding task set 0.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, PROCESS_LOCAL, 4668 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:12 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:12 UTC INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 36.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1576 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO scheduler.DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 1.723 s
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO scheduler.DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 0: Stage finished
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO scheduler.DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 1.758767 s
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on 192.168.1.6:33153 in memory (size: 36.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:14 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:14 UTC INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 36.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Hospital_type_code: string, City_Code_Hospital: string, Hospital_region_code: string, Department: string, Ward_Type: string ... 7 more fields>
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO codegen.CodeGenerator: Code generated in 274.383082 ms
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 195.0 KiB, free 434.2 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 434.2 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.6:33153 (size: 34.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO spark.SparkContext: Created broadcast 1 from collect at StringIndexer.scala:204
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4261093 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Registering RDD 6 (collect at StringIndexer.scala:204) as input to shuffle 0
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Got map stage job 1 (collect at StringIndexer.scala:204) with 2 output partitions
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 1 (collect at StringIndexer.scala:204)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[6] at collect at StringIndexer.scala:204), which has no missing parents
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 34.9 KiB, free 434.1 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 14.4 KiB, free 434.1 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.6:33153 (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[6] at collect at StringIndexer.scala:204) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO cluster.YarnScheduler: Adding task set 1.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:16 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:16 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, NODE_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:17 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:17 UTC INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:17 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:17 UTC INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:18 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:18 UTC INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 34.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:18 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:18 UTC INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 34.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:18 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:18 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 1741 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 5612 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 1 (collect at StringIndexer.scala:204) finished in 5.708 s
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: waiting: Set()
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO spark.SparkContext: Starting job: collect at StringIndexer.scala:204
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Got job 2 (collect at StringIndexer.scala:204) with 1 output partitions
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (collect at StringIndexer.scala:204)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[9] at collect at StringIndexer.scala:204), which has no missing parents
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 31.0 KiB, free 434.1 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 13.9 KiB, free 434.1 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.6:33153 (size: 13.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[9] at collect at StringIndexer.scala:204) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO cluster.YarnScheduler: Adding task set 3.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.1.6:33153 in memory (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4464 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 14.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 13.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:22 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:22 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 192.168.1.6:50480
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 363 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO scheduler.DAGScheduler: ResultStage 3 (collect at StringIndexer.scala:204) finished in 0.385 s
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO scheduler.DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 3: Stage finished
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO scheduler.DAGScheduler: Job 2 finished: collect at StringIndexer.scala:204, took 0.393501 s
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO codegen.CodeGenerator: Code generated in 28.980058 ms
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.1.6:33153 in memory (size: 13.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 13.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO util.Instrumentation: [b91de02c] Stage class: RandomForestClassifier
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO util.Instrumentation: [b91de02c] Stage uid: RandomForestClassifier_8b39636ad8ad
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:48:23 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:23 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Hospital_type_code: string, City_Code_Hospital: string, Hospital_region_code: string, Available_Extra_Rooms_in_Hospital: int, Department: string ... 10 more fields>
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO codegen.CodeGenerator: Code generated in 103.208353 ms
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 195.5 KiB, free 434.0 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 434.0 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.1.6:33153 (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO spark.SparkContext: Created broadcast 4 from rdd at Instrumentation.scala:62
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4261093 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO util.Instrumentation: [b91de02c] training: numPartitions=2 storageLevel=StorageLevel(1 replicas)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Hospital_type_code: string, City_Code_Hospital: string, Hospital_region_code: string, Available_Extra_Rooms_in_Hospital: int, Department: string ... 10 more fields>
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO codegen.CodeGenerator: Code generated in 56.529971 ms
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 195.5 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.1.6:33153 (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO spark.SparkContext: Created broadcast 5 from rdd at Predictor.scala:81
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4261093 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.1.6:33153 in memory (size: 34.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO util.Instrumentation: [b91de02c] {"labelCol":"Stay_index","featuresCol":"features","numTrees":20}
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 34.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 34.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO spark.SparkContext: Starting job: take at DecisionTreeMetadata.scala:119
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Got job 3 (take at DecisionTreeMetadata.scala:119) with 1 output partitions
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (take at DecisionTreeMetadata.scala:119)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[25] at map at DecisionTreeMetadata.scala:119), which has no missing parents
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 90.1 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 30.6 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.1.6:33153 (size: 30.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[25] at map at DecisionTreeMetadata.scala:119) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO cluster.YarnScheduler: Adding task set 4.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4945 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:24 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:24 UTC INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 30.6 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 1897 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: ResultStage 4 (take at DecisionTreeMetadata.scala:119) finished in 1.917 s
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 4: Stage finished
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Job 3 finished: take at DecisionTreeMetadata.scala:119, took 1.921054 s
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO spark.SparkContext: Starting job: aggregate at DecisionTreeMetadata.scala:125
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Got job 4 (aggregate at DecisionTreeMetadata.scala:125) with 2 output partitions
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (aggregate at DecisionTreeMetadata.scala:125)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[24] at retag at RandomForest.scala:274), which has no missing parents
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 90.2 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 30.7 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.1.6:33153 (size: 30.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO spark.SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 30.6 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 5 (MapPartitionsRDD[24] at retag at RandomForest.scala:274) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO cluster.YarnScheduler: Adding task set 5.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on 192.168.1.6:33153 in memory (size: 30.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4945 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 5.0 (TID 6) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, NODE_LOCAL, 4945 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 30.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:26 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:26 UTC INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 30.7 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:27 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:27 UTC INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:27 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:27 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 5.0 (TID 6) in 844 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/2)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 2643 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (2/2)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: ResultStage 5 (aggregate at DecisionTreeMetadata.scala:125) finished in 2.685 s
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 5: Stage finished
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Job 4 finished: aggregate at DecisionTreeMetadata.scala:125, took 2.689193 s
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:1054
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Registering RDD 28 (flatMap at RandomForest.scala:1039) as input to shuffle 1
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Got job 5 (collectAsMap at RandomForest.scala:1054) with 2 output partitions
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 7 (collectAsMap at RandomForest.scala:1054)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 6)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[28] at flatMap at RandomForest.scala:1039), which has no missing parents
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 95.9 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 33.0 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on 192.168.1.6:33153 (size: 33.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on 192.168.1.6:33153 in memory (size: 30.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[28] at flatMap at RandomForest.scala:1039) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO cluster.YarnScheduler: Adding task set 6.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 30.7 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 7) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 5043 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Removed broadcast_7_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 30.7 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 6.0 (TID 8) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, NODE_LOCAL, 5043 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 33.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 33.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:29 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:29 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 6.0 (TID 8) in 289 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/2)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 7) in 1867 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (2/2)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO cluster.YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 6 (flatMap at RandomForest.scala:1039) finished in 1.891 s
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 7)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[30] at map at RandomForest.scala:1054), which has no missing parents
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 11.0 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 4.9 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on 192.168.1.6:33153 (size: 4.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 7 (MapPartitionsRDD[30] at map at RandomForest.scala:1054) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO cluster.YarnScheduler: Adding task set 7.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 9) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 7.0 (TID 10) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 4.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 4.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.1.6:50484
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 192.168.1.6:50480
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 9) in 175 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 7.0 (TID 10) in 304 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO cluster.YarnScheduler: Removed TaskSet 7.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: ResultStage 7 (collectAsMap at RandomForest.scala:1054) finished in 0.327 s
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 7: Stage finished
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Job 5 finished: collectAsMap at RandomForest.scala:1054, took 2.227860 s
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_10 stored as values in memory (estimated size 4.0 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 1231.0 B, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on 192.168.1.6:33153 (size: 1231.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.SparkContext: Created broadcast 10 from broadcast at RandomForest.scala:293
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on 192.168.1.6:33153 in memory (size: 33.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 33.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 33.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 4.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 4.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Removed broadcast_9_piece0 on 192.168.1.6:33153 in memory (size: 4.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO util.Instrumentation: [b91de02c] {"numFeatures":11}
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO util.Instrumentation: [b91de02c] {"numClasses":11}
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO util.Instrumentation: [b91de02c] {"numExamples":318325}
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO util.Instrumentation: [b91de02c] {"sumOfWeights":318325.0}
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_11 stored as values in memory (estimated size 2.2 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 587.0 B, free 433.9 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on 192.168.1.6:33153 (size: 587.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.SparkContext: Created broadcast 11 from broadcast at RandomForest.scala:622
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:663
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Registering RDD 33 (mapPartitions at RandomForest.scala:644) as input to shuffle 2
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Got job 6 (collectAsMap at RandomForest.scala:663) with 2 output partitions
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 9 (collectAsMap at RandomForest.scala:663)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 8)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[33] at mapPartitions at RandomForest.scala:644), which has no missing parents
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_12 stored as values in memory (estimated size 96.4 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO memory.MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 33.5 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on 192.168.1.6:33153 (size: 33.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO spark.SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[33] at mapPartitions at RandomForest.scala:644) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO cluster.YarnScheduler: Adding task set 8.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 11) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 8.0 (TID 12) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, NODE_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 33.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_12_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 33.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added rdd_32_1 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 16.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:31 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:31 UTC INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 587.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:32 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:32 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 8.0 (TID 12) in 255 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:34 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:34 UTC INFO storage.BlockManagerInfo: Added rdd_32_0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 69.2 MiB, free: 365.1 MiB)
+[2022-02-02, 11:48:34 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:34 UTC INFO storage.BlockManagerInfo: Added broadcast_11_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 587.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:34 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:34 UTC INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 1231.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 11) in 5671 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO cluster.YarnScheduler: Removed TaskSet 8.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 8 (mapPartitions at RandomForest.scala:644) finished in 5.693 s
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 9)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[35] at map at RandomForest.scala:663), which has no missing parents
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO memory.MemoryStore: Block broadcast_13 stored as values in memory (estimated size 7.4 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO memory.MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 3.7 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on 192.168.1.6:33153 (size: 3.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO spark.SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 9 (MapPartitionsRDD[35] at map at RandomForest.scala:663) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO cluster.YarnScheduler: Adding task set 9.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 9.0 (TID 13) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 9.0 (TID 14) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 3.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Added broadcast_13_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 3.7 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 192.168.1.6:50480
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 192.168.1.6:50484
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Added broadcast_10_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 1231.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 9.0 (TID 14) in 505 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/2)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 9.0 (TID 13) in 506 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (2/2)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO cluster.YarnScheduler: Removed TaskSet 9.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: ResultStage 9 (collectAsMap at RandomForest.scala:663) finished in 0.538 s
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 9: Stage finished
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO scheduler.DAGScheduler: Job 6 finished: collectAsMap at RandomForest.scala:663, took 6.243522 s
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(11) (from destroy at RandomForest.scala:674)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on 192.168.1.6:33153 in memory (size: 587.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 587.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO storage.BlockManagerInfo: Removed broadcast_11_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 587.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:37 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:37 UTC INFO memory.MemoryStore: Block broadcast_14 stored as values in memory (estimated size 4.8 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO memory.MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 890.0 B, free 433.8 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on 192.168.1.6:33153 (size: 890.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO spark.SparkContext: Created broadcast 14 from broadcast at RandomForest.scala:622
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 33.5 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on 192.168.1.6:33153 in memory (size: 33.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_12_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 33.5 KiB, free: 365.2 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:663
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Registering RDD 36 (mapPartitions at RandomForest.scala:644) as input to shuffle 3
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Got job 7 (collectAsMap at RandomForest.scala:663) with 2 output partitions
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 11 (collectAsMap at RandomForest.scala:663)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 10)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 10)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 10 (MapPartitionsRDD[36] at mapPartitions at RandomForest.scala:644), which has no missing parents
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO memory.MemoryStore: Block broadcast_15 stored as values in memory (estimated size 108.1 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO memory.MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 39.5 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on 192.168.1.6:33153 (size: 39.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO spark.SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on 192.168.1.6:33153 in memory (size: 3.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 3.7 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Removed broadcast_13_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 3.7 KiB, free: 365.2 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 10 (MapPartitionsRDD[36] at mapPartitions at RandomForest.scala:644) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO cluster.YarnScheduler: Adding task set 10.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 10.0 (TID 15) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 16) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 39.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_15_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 39.5 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 890.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO storage.BlockManagerInfo: Added broadcast_14_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 890.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:38 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:38 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 10.0 (TID 15) in 121 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 16) in 2476 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO cluster.YarnScheduler: Removed TaskSet 10.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 10 (mapPartitions at RandomForest.scala:644) finished in 2.501 s
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 11)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[38] at map at RandomForest.scala:663), which has no missing parents
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_16 stored as values in memory (estimated size 13.6 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 6.9 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on 192.168.1.6:33153 (size: 6.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 11 (MapPartitionsRDD[38] at map at RandomForest.scala:663) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO cluster.YarnScheduler: Adding task set 11.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 11.0 (TID 17) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 11.0 (TID 18) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 6.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_16_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 6.9 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 192.168.1.6:50480
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 3 to 192.168.1.6:50484
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 11.0 (TID 17) in 88 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/2)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 11.0 (TID 18) in 89 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (2/2)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO cluster.YarnScheduler: Removed TaskSet 11.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: ResultStage 11 (collectAsMap at RandomForest.scala:663) finished in 0.111 s
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 11: Stage finished
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Job 7 finished: collectAsMap at RandomForest.scala:663, took 2.622025 s
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(14) (from destroy at RandomForest.scala:674)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 890.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on 192.168.1.6:33153 in memory (size: 890.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_14_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 890.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_17 stored as values in memory (estimated size 9.7 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 1425.0 B, free 433.8 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on 192.168.1.6:33153 (size: 1425.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.SparkContext: Created broadcast 17 from broadcast at RandomForest.scala:622
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:663
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Registering RDD 39 (mapPartitions at RandomForest.scala:644) as input to shuffle 4
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Got job 8 (collectAsMap at RandomForest.scala:663) with 2 output partitions
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 13 (collectAsMap at RandomForest.scala:663)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 12)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[39] at mapPartitions at RandomForest.scala:644), which has no missing parents
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_18 stored as values in memory (estimated size 128.6 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO memory.MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 47.5 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on 192.168.1.6:33153 (size: 47.5 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO spark.SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 6.9 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 6.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[39] at mapPartitions at RandomForest.scala:644) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO cluster.YarnScheduler: Adding task set 12.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 12.0 (TID 19) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 12.0 (TID 20) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_16_piece0 on 192.168.1.6:33153 in memory (size: 6.9 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 47.5 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_18_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 47.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 39.5 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on 192.168.1.6:33153 in memory (size: 39.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Removed broadcast_15_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 39.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 1425.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO storage.BlockManagerInfo: Added broadcast_17_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 1425.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:40 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:40 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 12.0 (TID 19) in 137 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 12.0 (TID 20) in 2908 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO cluster.YarnScheduler: Removed TaskSet 12.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 12 (mapPartitions at RandomForest.scala:644) finished in 2.942 s
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 13)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[41] at map at RandomForest.scala:663), which has no missing parents
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_19 stored as values in memory (estimated size 20.0 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 9.7 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on 192.168.1.6:33153 (size: 9.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 13 (MapPartitionsRDD[41] at map at RandomForest.scala:663) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO cluster.YarnScheduler: Adding task set 13.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 13.0 (TID 21) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 13.0 (TID 22) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 9.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 192.168.1.6:50480
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_19_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 9.7 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 4 to 192.168.1.6:50484
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 13.0 (TID 21) in 90 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 13.0 (TID 22) in 94 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO cluster.YarnScheduler: Removed TaskSet 13.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: ResultStage 13 (collectAsMap at RandomForest.scala:663) finished in 0.109 s
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 13: Stage finished
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Job 8 finished: collectAsMap at RandomForest.scala:663, took 3.057479 s
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(17) (from destroy at RandomForest.scala:674)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 1425.0 B, free: 365.1 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 1425.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_17_piece0 on 192.168.1.6:33153 in memory (size: 1425.0 B, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_20 stored as values in memory (estimated size 18.9 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 2.6 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on 192.168.1.6:33153 (size: 2.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.SparkContext: Created broadcast 20 from broadcast at RandomForest.scala:622
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_18_piece0 on 192.168.1.6:33153 in memory (size: 47.5 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_18_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 47.5 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_18_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 47.5 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_19_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 9.7 KiB, free: 365.2 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_19_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 9.7 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:663
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Registering RDD 42 (mapPartitions at RandomForest.scala:644) as input to shuffle 5
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Got job 9 (collectAsMap at RandomForest.scala:663) with 2 output partitions
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 15 (collectAsMap at RandomForest.scala:663)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 14)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Removed broadcast_19_piece0 on 192.168.1.6:33153 in memory (size: 9.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[42] at mapPartitions at RandomForest.scala:644), which has no missing parents
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_21 stored as values in memory (estimated size 169.7 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO memory.MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 63.8 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on 192.168.1.6:33153 (size: 63.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO spark.SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[42] at mapPartitions at RandomForest.scala:644) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO cluster.YarnScheduler: Adding task set 14.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 14.0 (TID 23) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 14.0 (TID 24) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 63.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_21_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 63.8 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 2.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:43 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:43 UTC INFO storage.BlockManagerInfo: Added broadcast_20_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 2.6 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:44 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:44 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 14.0 (TID 24) in 95 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 14.0 (TID 23) in 3689 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO cluster.YarnScheduler: Removed TaskSet 14.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 14 (mapPartitions at RandomForest.scala:644) finished in 3.705 s
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 15)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 15 (MapPartitionsRDD[44] at map at RandomForest.scala:663), which has no missing parents
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_22 stored as values in memory (estimated size 32.7 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 14.8 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_22_piece0 in memory on 192.168.1.6:33153 (size: 14.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 15 (MapPartitionsRDD[44] at map at RandomForest.scala:663) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO cluster.YarnScheduler: Adding task set 15.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 15.0 (TID 25) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 15.0 (TID 26) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_22_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 14.8 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_22_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 14.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 192.168.1.6:50480
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 5 to 192.168.1.6:50484
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 15.0 (TID 26) in 112 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 15.0 (TID 25) in 147 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO cluster.YarnScheduler: Removed TaskSet 15.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: ResultStage 15 (collectAsMap at RandomForest.scala:663) finished in 0.164 s
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Job 9 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 15: Stage finished
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Job 9 finished: collectAsMap at RandomForest.scala:663, took 3.882572 s
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(20) (from destroy at RandomForest.scala:674)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_20_piece0 on 192.168.1.6:33153 in memory (size: 2.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_20_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 2.6 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_20_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 2.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_23 stored as values in memory (estimated size 37.3 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 4.8 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_23_piece0 in memory on 192.168.1.6:33153 (size: 4.8 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.SparkContext: Created broadcast 23 from broadcast at RandomForest.scala:622
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_21_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 63.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_21_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 63.8 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_21_piece0 on 192.168.1.6:33153 in memory (size: 63.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_22_piece0 on 192.168.1.6:33153 in memory (size: 14.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_22_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 14.8 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Removed broadcast_22_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 14.8 KiB, free: 365.2 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.SparkContext: Starting job: collectAsMap at RandomForest.scala:663
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Registering RDD 45 (mapPartitions at RandomForest.scala:644) as input to shuffle 6
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Got job 10 (collectAsMap at RandomForest.scala:663) with 2 output partitions
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 17 (collectAsMap at RandomForest.scala:663)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 16)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 16)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 16 (MapPartitionsRDD[45] at mapPartitions at RandomForest.scala:644), which has no missing parents
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_24 stored as values in memory (estimated size 253.0 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO memory.MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 94.9 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_24_piece0 in memory on 192.168.1.6:33153 (size: 94.9 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO spark.SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[45] at mapPartitions at RandomForest.scala:644) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO cluster.YarnScheduler: Adding task set 16.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 16.0 (TID 27) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 16.0 (TID 28) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, PROCESS_LOCAL, 4934 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_24_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 94.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_24_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 94.9 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_23_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 4.8 KiB, free: 365.1 MiB)
+[2022-02-02, 11:48:47 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:47 UTC INFO storage.BlockManagerInfo: Added broadcast_23_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 4.8 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:48 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:48 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 16.0 (TID 28) in 105 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 16.0 (TID 27) in 4465 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO cluster.YarnScheduler: Removed TaskSet 16.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 16 (mapPartitions at RandomForest.scala:644) finished in 4.480 s
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: waiting: Set(ResultStage 17)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 17 (MapPartitionsRDD[47] at map at RandomForest.scala:663), which has no missing parents
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO memory.MemoryStore: Block broadcast_25 stored as values in memory (estimated size 58.2 KiB, free 433.5 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO memory.MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 24.7 KiB, free 433.5 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Added broadcast_25_piece0 in memory on 192.168.1.6:33153 (size: 24.7 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO spark.SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ResultStage 17 (MapPartitionsRDD[47] at map at RandomForest.scala:663) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO cluster.YarnScheduler: Adding task set 17.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 17.0 (TID 29) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 17.0 (TID 30) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, NODE_LOCAL, 4282 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Added broadcast_25_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 24.7 KiB, free: 365.0 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Added broadcast_25_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 24.7 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 192.168.1.6:50484
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 6 to 192.168.1.6:50480
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 17.0 (TID 29) in 206 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/2)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 17.0 (TID 30) in 272 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (2/2)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO cluster.YarnScheduler: Removed TaskSet 17.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: ResultStage 17 (collectAsMap at RandomForest.scala:663) finished in 0.303 s
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: Job 10 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 17: Stage finished
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO scheduler.DAGScheduler: Job 10 finished: collectAsMap at RandomForest.scala:663, took 4.789773 s
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(23) (from destroy at RandomForest.scala:674)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_23_piece0 on 192.168.1.6:33153 in memory (size: 4.8 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_23_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 4.8 KiB, free: 365.0 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_23_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 4.8 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO impl.RandomForest: Internal timing for DecisionTree:
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO impl.RandomForest:   init: 0.004498037
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - total: 21.041161116
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - findBestSplits: 20.998536386
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - chooseSplits: 20.942264547
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO rdd.MapPartitionsRDD: Removing RDD 32 from persistence list
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManager: Removing RDD 32
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO broadcast.TorrentBroadcast: Destroying Broadcast(10) (from destroy at RandomForest.scala:305)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 1231.0 B, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on 192.168.1.6:33153 in memory (size: 1231.0 B, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO util.Instrumentation: [b91de02c] {"numClasses":11}
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO util.Instrumentation: [b91de02c] {"numFeatures":11}
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO storage.BlockManagerInfo: Removed broadcast_10_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 1231.0 B, free: 434.2 MiB)
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-02-02, 11:48:52 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:52 UTC INFO datasources.FileSourceStrategy: Output Data Schema: struct<Hospital_type_code: string, City_Code_Hospital: string, Hospital_region_code: string, Available_Extra_Rooms_in_Hospital: int, Department: string ... 10 more fields>
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_25_piece0 on 192.168.1.6:33153 in memory (size: 24.7 KiB, free: 434.2 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_25_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 24.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_25_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 24.7 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_24_piece0 on 192.168.1.6:33153 in memory (size: 94.9 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_24_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 94.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_24_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 94.9 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManager: Removing RDD 32
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO codegen.CodeGenerator: Code generated in 68.889361 ms
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_26 stored as values in memory (estimated size 195.5 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 35.1 KiB, free 433.7 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Added broadcast_26_piece0 in memory on 192.168.1.6:33153 (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO spark.SparkContext: Created broadcast 26 from rdd at ClassificationSummary.scala:58
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4261093 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO util.Instrumentation: [b91de02c] training finished
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO Configuration.deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO io.HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO spark.SparkContext: Starting job: runJob at SparkHadoopWriter.scala:83
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Got job 11 (runJob at SparkHadoopWriter.scala:83) with 1 output partitions
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 18 (runJob at SparkHadoopWriter.scala:83)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[56] at saveAsTextFile at ReadWrite.scala:413), which has no missing parents
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_27 stored as values in memory (estimated size 100.5 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 36.3 KiB, free 433.6 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Added broadcast_27_piece0 in memory on 192.168.1.6:33153 (size: 36.3 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO spark.SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 18 (MapPartitionsRDD[56] at saveAsTextFile at ReadWrite.scala:413) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO cluster.YarnScheduler: Adding task set 18.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 18.0 (TID 31) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, PROCESS_LOCAL, 4709 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Added broadcast_27_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 36.3 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.1.6:33153 in memory (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 35.1 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 35.1 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.1.6:33153 in memory (size: 35.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 18.0 (TID 31) in 343 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO cluster.YarnScheduler: Removed TaskSet 18.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: ResultStage 18 (runJob at SparkHadoopWriter.scala:83) finished in 0.363 s
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 18: Stage finished
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Job 11 finished: runJob at SparkHadoopWriter.scala:83, took 0.365532 s
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO io.SparkHadoopWriter: Start to commit write Job job_202202021148533963651626847671751_0056.
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO io.SparkHadoopWriter: Write Job job_202202021148533963651626847671751_0056 committed. Elapsed time: 34 ms.
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO io.HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO spark.SparkContext: Starting job: runJob at SparkHadoopWriter.scala:83
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Got job 12 (runJob at SparkHadoopWriter.scala:83) with 1 output partitions
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 19 (runJob at SparkHadoopWriter.scala:83)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[58] at saveAsTextFile at ReadWrite.scala:413), which has no missing parents
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_28 stored as values in memory (estimated size 100.6 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO memory.MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 36.4 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Added broadcast_28_piece0 in memory on 192.168.1.6:33153 (size: 36.4 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO spark.SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_27_piece0 on 192.168.1.6:33153 in memory (size: 36.3 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 19 (MapPartitionsRDD[58] at saveAsTextFile at ReadWrite.scala:413) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO cluster.YarnScheduler: Adding task set 19.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Removed broadcast_27_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 36.3 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 19.0 (TID 32) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, PROCESS_LOCAL, 4961 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:53 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:53 UTC INFO storage.BlockManagerInfo: Added broadcast_28_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 36.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 19.0 (TID 32) in 140 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Removed TaskSet 19.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: ResultStage 19 (runJob at SparkHadoopWriter.scala:83) finished in 0.165 s
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 19: Stage finished
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Job 12 finished: runJob at SparkHadoopWriter.scala:83, took 0.167042 s
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO io.SparkHadoopWriter: Start to commit write Job job_20220202114853589262078530152561_0058.
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO io.SparkHadoopWriter: Write Job job_20220202114853589262078530152561_0058 committed. Elapsed time: 18 ms.
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO io.HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO spark.SparkContext: Starting job: runJob at SparkHadoopWriter.scala:83
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Got job 13 (runJob at SparkHadoopWriter.scala:83) with 1 output partitions
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 20 (runJob at SparkHadoopWriter.scala:83)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 20 (MapPartitionsRDD[60] at saveAsTextFile at ReadWrite.scala:413), which has no missing parents
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO memory.MemoryStore: Block broadcast_29 stored as values in memory (estimated size 100.6 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO memory.MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 36.4 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Added broadcast_29_piece0 in memory on 192.168.1.6:33153 (size: 36.4 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Removed broadcast_28_piece0 on 192.168.1.6:33153 in memory (size: 36.4 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Removed broadcast_28_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 36.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO spark.SparkContext: Created broadcast 29 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 20 (MapPartitionsRDD[60] at saveAsTextFile at ReadWrite.scala:413) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Adding task set 20.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 20.0 (TID 33) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, PROCESS_LOCAL, 5223 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Added broadcast_29_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 36.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 20.0 (TID 33) in 497 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Removed TaskSet 20.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: ResultStage 20 (runJob at SparkHadoopWriter.scala:83) finished in 0.536 s
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 20: Stage finished
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Job 13 finished: runJob at SparkHadoopWriter.scala:83, took 0.538783 s
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO io.SparkHadoopWriter: Start to commit write Job job_202202021148541383101488838964570_0060.
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO io.SparkHadoopWriter: Write Job job_202202021148541383101488838964570_0060 committed. Elapsed time: 18 ms.
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO parquet.ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO datasources.SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO datasources.SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO codegen.CodeGenerator: Code generated in 13.913823 ms
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Registering RDD 63 (parquet at treeModels.scala:483) as input to shuffle 7
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Got map stage job 14 (parquet at treeModels.scala:483) with 2 output partitions
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 21 (parquet at treeModels.scala:483)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 21 (MapPartitionsRDD[63] at parquet at treeModels.scala:483), which has no missing parents
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO memory.MemoryStore: Block broadcast_30 stored as values in memory (estimated size 8.2 KiB, free 434.0 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO memory.MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 4.4 KiB, free 434.0 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Added broadcast_30_piece0 in memory on 192.168.1.6:33153 (size: 4.4 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO spark.SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 21 (MapPartitionsRDD[63] at parquet at treeModels.scala:483) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Adding task set 21.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Removed broadcast_29_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 36.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 21.0 (TID 34) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, PROCESS_LOCAL, 11112 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 21.0 (TID 35) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 1, PROCESS_LOCAL, 11112 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Removed broadcast_29_piece0 on 192.168.1.6:33153 in memory (size: 36.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Added broadcast_30_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 4.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO storage.BlockManagerInfo: Added broadcast_30_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 4.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 21.0 (TID 34) in 67 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 21.0 (TID 35) in 78 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO cluster.YarnScheduler: Removed TaskSet 21.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 21 (parquet at treeModels.scala:483) finished in 0.115 s
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: waiting: Set()
+[2022-02-02, 11:48:54 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:54 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO spark.SparkContext: Starting job: parquet at treeModels.scala:483
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Got job 15 (parquet at treeModels.scala:483) with 1 output partitions
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 23 (parquet at treeModels.scala:483)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 22)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 23 (ShuffledRowRDD[64] at parquet at treeModels.scala:483), which has no missing parents
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO memory.MemoryStore: Block broadcast_31 stored as values in memory (estimated size 205.1 KiB, free 434.0 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO memory.MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 74.1 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO storage.BlockManagerInfo: Removed broadcast_30_piece0 on 192.168.1.6:33153 in memory (size: 4.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO storage.BlockManagerInfo: Added broadcast_31_piece0 in memory on 192.168.1.6:33153 (size: 74.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO storage.BlockManagerInfo: Removed broadcast_30_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 4.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO spark.SparkContext: Created broadcast 31 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO storage.BlockManagerInfo: Removed broadcast_30_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 4.4 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 23 (ShuffledRowRDD[64] at parquet at treeModels.scala:483) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO cluster.YarnScheduler: Adding task set 23.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 23.0 (TID 36) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 0, NODE_LOCAL, 4464 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO storage.BlockManagerInfo: Added broadcast_31_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 74.1 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 7 to 192.168.1.6:50480
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 23.0 (TID 36) in 644 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/1)
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO cluster.YarnScheduler: Removed TaskSet 23.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: ResultStage 23 (parquet at treeModels.scala:483) finished in 0.701 s
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Job 15 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 23: Stage finished
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO scheduler.DAGScheduler: Job 15 finished: parquet at treeModels.scala:483, took 0.707639 s
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO datasources.FileFormatWriter: Start to commit write Job 1f6a617e-610f-45e8-80cc-941161ab3e04.
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO datasources.FileFormatWriter: Write Job 1f6a617e-610f-45e8-80cc-941161ab3e04 committed. Elapsed time: 26 ms.
+[2022-02-02, 11:48:55 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:55 UTC INFO datasources.FileFormatWriter: Finished processing stats for write job 1f6a617e-610f-45e8-80cc-941161ab3e04.
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO parquet.ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO datasources.SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO datasources.SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO codegen.CodeGenerator: Code generated in 39.231931 ms
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Registering RDD 69 (parquet at treeModels.scala:491) as input to shuffle 8
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Got map stage job 16 (parquet at treeModels.scala:491) with 2 output partitions
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 24 (parquet at treeModels.scala:491)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 24 (MapPartitionsRDD[69] at parquet at treeModels.scala:491), which has no missing parents
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO memory.MemoryStore: Block broadcast_32 stored as values in memory (estimated size 41.1 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO memory.MemoryStore: Block broadcast_32_piece0 stored as bytes in memory (estimated size 12.0 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Added broadcast_32_piece0 in memory on 192.168.1.6:33153 (size: 12.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO spark.SparkContext: Created broadcast 32 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 24 (MapPartitionsRDD[69] at parquet at treeModels.scala:491) (first 15 tasks are for partitions Vector(0, 1))
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO cluster.YarnScheduler: Adding task set 24.0 with 2 tasks resource profile 0
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Removed broadcast_31_piece0 on 192.168.1.6:33153 in memory (size: 74.1 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Removed broadcast_31_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 74.1 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 24.0 (TID 37) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, PROCESS_LOCAL, 109314 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.TaskSetManager: Starting task 1.0 in stage 24.0 (TID 38) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 1, partition 1, PROCESS_LOCAL, 105528 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Added broadcast_32_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 (size: 12.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Added broadcast_32_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 12.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.TaskSetManager: Finished task 1.0 in stage 24.0 (TID 38) in 243 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 1) (1/2)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 24.0 (TID 37) in 257 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (2/2)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO cluster.YarnScheduler: Removed TaskSet 24.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: ShuffleMapStage 24 (parquet at treeModels.scala:491) finished in 0.281 s
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: looking for newly runnable stages
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: running: Set()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: waiting: Set()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: failed: Set()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO spark.SparkContext: Starting job: parquet at treeModels.scala:491
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Got job 17 (parquet at treeModels.scala:491) with 1 output partitions
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Final stage: ResultStage 26 (parquet at treeModels.scala:491)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 25)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Submitting ResultStage 26 (ShuffledRowRDD[70] at parquet at treeModels.scala:491), which has no missing parents
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO memory.MemoryStore: Block broadcast_33 stored as values in memory (estimated size 206.5 KiB, free 433.9 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO memory.MemoryStore: Block broadcast_33_piece0 stored as bytes in memory (estimated size 74.6 KiB, free 433.8 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Added broadcast_33_piece0 in memory on 192.168.1.6:33153 (size: 74.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Removed broadcast_32_piece0 on 192.168.1.6:33153 in memory (size: 12.0 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Removed broadcast_32_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 in memory (size: 12.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Removed broadcast_32_piece0 on vedant-HP-Pavilion-Laptop-15-cc1xx:46091 in memory (size: 12.0 KiB, free: 434.4 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO spark.SparkContext: Created broadcast 33 from broadcast at DAGScheduler.scala:1427
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 26 (ShuffledRowRDD[70] at parquet at treeModels.scala:491) (first 15 tasks are for partitions Vector(0))
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO cluster.YarnScheduler: Adding task set 26.0 with 1 tasks resource profile 0
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO scheduler.TaskSetManager: Starting task 0.0 in stage 26.0 (TID 39) (vedant-HP-Pavilion-Laptop-15-cc1xx, executor 2, partition 0, NODE_LOCAL, 4464 bytes) taskResourceAssignments Map()
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO storage.BlockManagerInfo: Added broadcast_33_piece0 in memory on vedant-HP-Pavilion-Laptop-15-cc1xx:40881 (size: 74.6 KiB, free: 434.3 MiB)
+[2022-02-02, 11:48:56 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:56 UTC INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 8 to 192.168.1.6:50484
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO scheduler.TaskSetManager: Finished task 0.0 in stage 26.0 (TID 39) in 655 ms on vedant-HP-Pavilion-Laptop-15-cc1xx (executor 2) (1/1)
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnScheduler: Removed TaskSet 26.0, whose tasks have all completed, from pool
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO scheduler.DAGScheduler: ResultStage 26 (parquet at treeModels.scala:491) finished in 0.708 s
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO scheduler.DAGScheduler: Job 17 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnScheduler: Killing all running tasks in stage 26: Stage finished
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO scheduler.DAGScheduler: Job 17 finished: parquet at treeModels.scala:491, took 0.711435 s
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO datasources.FileFormatWriter: Start to commit write Job 994a9f0f-028d-4147-8386-91a9b8b6a3fb.
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO datasources.FileFormatWriter: Write Job 994a9f0f-028d-4147-8386-91a9b8b6a3fb committed. Elapsed time: 21 ms.
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO datasources.FileFormatWriter: Finished processing stats for write job 994a9f0f-028d-4147-8386-91a9b8b6a3fb.
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.Instrumentation: [3f8ace84] training finished
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.Instrumentation: [07df51ba] training finished
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO spark.SparkContext: Invoking stop() from shutdown hook
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO server.AbstractConnector: Stopped Spark@200b0de4{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO ui.SparkUI: Stopped Spark web UI at http://192.168.1.6:4040
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO cluster.YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO memory.MemoryStore: MemoryStore cleared
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO storage.BlockManager: BlockManager stopped
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO spark.SparkContext: Successfully stopped SparkContext
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.ShutdownHookManager: Shutdown hook called
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-96984d3d-55b1-45d0-9365-1a00fc9c18d4
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-c0c59bdd-9f68-4433-a9a2-e912d600e92c/pyspark-857d72dc-585e-442f-ad48-b47adc85ca38
+[2022-02-02, 11:48:57 UTC] {spark_submit.py:514} INFO - 2022-02-02, 11:48:57 UTC INFO util.ShutdownHookManager: Deleting directory /tmp/spark-c0c59bdd-9f68-4433-a9a2-e912d600e92c
+[2022-02-02, 11:48:57 UTC] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=210940125053_MiniProjectDag, task_id=Spark_ML, execution_date=20220202T055822, start_date=20220202T061738, end_date=20220202T061857
+[2022-02-02, 11:48:57 UTC] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-02-02, 11:48:57 UTC] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+
